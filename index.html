@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Configurateur G‑Class Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Configurateur Mercedes G‑Class</h1>
+  <p>Version Pro – Style AMG / Off‑Road</p>
+</header>
+
+<main>
+  <section class="viewer">
+    <img id="carImage" src="img/base.png" alt="G Class">
+  </section>
+
+  <section class="panel">
+    <h2>Personnalisation</h2>
+
+    <div class="option">
+      <label>Couleur</label>
+      <select onchange="setColor(this.value)">
+        <option value="base">Rouge classique</option>
+        <option value="black">Noir</option>
+        <option value="grey">Gris Nardo</option>
+      </select>
+    </div>
+
+    <div class="option">
+      <label>Jantes</label>
+      <select onchange="setWheels(this.value)">
+        <option value="base">Origine</option>
+        <option value="amg">AMG</option>
+        <option value="offroad">Off‑Road</option>
+      </select>
+    </div>
+
+    <div class="option">
+      <label>Phares</label>
+      <select onchange="setLights(this.value)">
+        <option value="classic">Classiques</option>
+        <option value="led">LED modernes</option>
+      </select>
+    </div>
+
+    <div class="option">
+      <label>Suspension</label>
+      <select onchange="setLift(this.value)">
+        <option value="normal">Normale</option>
+        <option value="lift">Surélevée</option>
+      </select>
+    </div>
+
+    <div class="price">
+      Prix total : <span id="price">14 000</span> €
+    </div>
+
+    <button>Commander</button>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
